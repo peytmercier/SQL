@@ -1,0 +1,23 @@
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, quantity INTEGER, brand TEXT, item TEXT, price INTEGER);
+
+INSERT INTO clothing_store VALUES (1, 10, "nike", "shirt", 50);
+INSERT INTO clothing_store VALUES (2, 5, "adidas", "skirt", 25);
+INSERT INTO clothing_store VALUES (3, 7, "adidas", "jeans", 75);
+INSERT INTO clothing_store VALUES (4, 12, "zara", "sunglasses", 20);
+INSERT INTO clothing_store VALUES (5, 25, "zara", "headbands", 10);
+INSERT INTO clothing_store VALUES (6, 8, "nike", "sneakers", 35);
+INSERT INTO clothing_store VALUES (7, 5, "nike", "clips", 2);
+INSERT INTO clothing_store VALUES (8, 10, "adidas", "wallet", 15);
+INSERT INTO clothing_store VALUES (9, 15, "kate spade", "bag", 45);
+INSERT INTO clothing_store VALUES (10, 2, "nike", "sweatshirt", 100);
+INSERT INTO clothing_store VALUES (11, 10, "kate spade", "necklace", 25);
+INSERT INTO clothing_store VALUES (12, 7, "kate spade", "bracelet", 20);
+INSERT INTO clothing_store VALUES (13, 1, "kate spade", "earrings", 15);
+INSERT INTO clothing_store VALUES (14, 30, "OPI", "nail polish", 5);
+INSERT INTO clothing_store VALUES (15, 5, "adidas", "hat", 20);
+
+-- what is the most expensive item in the store vs the least expensive?
+SELECT * FROM clothing_store ORDER BY price desc;
+
+-- what would be the net profit if all of the products were sold?
+SELECT SUM (price) FROM clothing_store;
